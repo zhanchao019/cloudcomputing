@@ -1,0 +1,25 @@
+kinit team13
+csc4160?
+
+
+/user/team13/zhanchao/hadoop/input
+
+hdfs dfs -copyFromLocal ~/matrix/L1.txt /user/team13/zhanchao/hadoop/input
+
+
+ find -name *streaming.jar
+
+/usr/hdp/3.0.1.0-187/hadoop-mapreduce/hadoop-streaming.jar
+
+
+hadoop jar /usr/hdp/3.0.1.0-187/hadoop-mapreduce/hadoop-streaming.jar -mapper hdfs:///cuhkcluster/user/team13/zhanchao/hadoop/MatMulMapper.py -reducer hdfs:///cuhkcluster/user/team13/zhanchao/hadoop/MatMulReducer.py -input /user/team13/zhanchao/hadoop/input -output /user/team13/zhanchao/hadoop/output
+
+
+hadoop jar /usr/hdp/3.0.1.0-187/hadoop-mapreduce/hadoop-streaming.jar \
+-files  /home/team13/matrix_zhanchao/MatMulMapper.py,/home/team13/matrix_zhanchao/MatMulReducer.py \
+-mapper MatMulMapper.py \
+-reducer MatMulReducer.py  \
+-input /user/team13/zhanchao/hadoop/input \
+-output /user/team13/zhanchao/hadoop/output
+
+
