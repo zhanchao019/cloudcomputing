@@ -4,10 +4,10 @@ csc4160?
 
 /user/team13/zhanchao/hadoop/input
 
-hdfs dfs -copyFromLocal ~/matrix/L1.txt /user/team13/zhanchao/hadoop/input
+hdfs dfs -copyFromLocal ~/matrix_zhanchao/L1.txt /user/team13/zhanchao/hadoop/input
+hdfs dfs -copyToLocal /user/team13/zhanchao/hadoop/output ~/matrix_zhanchao/output
 
-
- find -name *streaming.jar
+find -name *streaming.jar
 
 /usr/hdp/3.0.1.0-187/hadoop-mapreduce/hadoop-streaming.jar
 
